@@ -1,4 +1,6 @@
 import { Shield, Lock, HeadsetIcon, UserCheck } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   {
@@ -24,10 +26,13 @@ const features = [
 ];
 
 const WhyChoose = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">Why Choose LU</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">Why Choose LU</h2>
+        <p className="text-center text-muted-foreground text-xl mb-16">Explore Our Features</p>
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -45,6 +50,15 @@ const WhyChoose = () => {
               </div>
             );
           })}
+        </div>
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            className="rounded-full px-8"
+            onClick={() => navigate('/multi-factor-authentication')}
+          >
+            See More
+          </Button>
         </div>
       </div>
     </section>

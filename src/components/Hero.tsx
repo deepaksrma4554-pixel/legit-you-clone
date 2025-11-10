@@ -28,7 +28,12 @@ const Hero = () => {
               >
                 Explore Features
               </Button>
-              <Button size="lg" variant="secondary" className="bg-dark-bg hover:bg-dark-surface text-white rounded-full px-8">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="bg-dark-bg hover:bg-dark-surface text-white rounded-full px-8"
+                onClick={() => navigate('/privacy')}
+              >
                 Review Privacy
               </Button>
             </div>

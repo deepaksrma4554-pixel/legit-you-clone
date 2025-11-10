@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">
@@ -11,7 +14,11 @@ const AboutSection = () => {
             Our advanced system ensures the complete security of your identity, providing 
             peace of mind in today's digital world.
           </p>
-          <Button size="lg" className="rounded-full px-8">
+          <Button 
+            size="lg" 
+            className="rounded-full px-8"
+            onClick={() => navigate('/about')}
+          >
             Discover More
           </Button>
         </div>
