@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[90vh] bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end overflow-hidden">
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -17,7 +20,12 @@ const Hero = () => {
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8">
                 Get Started
               </Button>
-              <Button size="lg" variant="secondary" className="bg-dark-bg hover:bg-dark-surface text-white rounded-full px-8">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="bg-dark-bg hover:bg-dark-surface text-white rounded-full px-8"
+                onClick={() => navigate('/multi-factor-authentication')}
+              >
                 Explore Features
               </Button>
               <Button size="lg" variant="secondary" className="bg-dark-bg hover:bg-dark-surface text-white rounded-full px-8">
